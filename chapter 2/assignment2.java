@@ -169,22 +169,52 @@ public class MainClass {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter total miles driven per day: ");
-        double miles = scanner.nextDouble();
+        System.out.println("Choose an operation to perform:");
+        System.out.println("1. Largest and Smallest Integers");
+        System.out.println("2. Check Multiples");
+        System.out.println("3. Checkerboard Pattern");
+        System.out.println("4. Circle Metrics");
+        System.out.println("5. Character Integers");
+        System.out.println("6. Separate Digits");
+        System.out.println("7. Squares and Cubes Table");
+        System.out.println("8. Number Analysis");
+        System.out.println("9. BMI Calculator");
+        System.out.println("10. Population Growth Estimation");
 
-        System.out.print("Enter cost per gallon of gasoline: ");
-        double costPerGallon = scanner.nextDouble();
-
-        System.out.print("Enter average miles per gallon: ");
-        double milesPerGallon = scanner.nextDouble();
-
-        System.out.print("Enter parking fees per day: ");
-        double parkingFees = scanner.nextDouble();
-
-        System.out.print("Enter tolls per day: ");
-        double tolls = scanner.nextDouble();
-
-        double dailyCost = (miles / milesPerGallon * costPerGallon) + parkingFees + tolls;
-        System.out.printf("Your daily driving cost is: %.2f%n", dailyCost);
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                new LargestSmallest().findLargestSmallest();
+                break;
+            case 2:
+                new Multiples().checkMultiples();
+                break;
+            case 3:
+                new Checkerboard().displayCheckerboard();
+                break;
+            case 4:
+                new CircleMetrics().calculateMetrics();
+                break;
+            case 5:
+                new CharacterIntegers().displayCharacterValues();
+                break;
+            case 6:
+                new SeparateDigits().separateDigits();
+                break;
+            case 7:
+                new SquaresCubesTable().displayTable();
+                break;
+            case 8:
+                new NumberAnalysis().analyzeNumbers();
+                break;
+            case 9:
+                new BMICalculator().calculateBMI();
+                break;
+            case 10:
+                new PopulationGrowth().estimateGrowth();
+                break;
+            default:
+                System.out.println("Invalid choice. Exiting.");
+        }
     }
 }
