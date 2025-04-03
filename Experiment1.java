@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        // Using do-while loop to prompt user for a valid integer input
+        do {
+            System.out.print("Enter a number (positive or negative): ");
+            number = scanner.nextInt(); // Accepts both positive and negative integers
+        } while (number == 0); // Ensures the number is not zero (since 0 has no meaningful multiplication table)
+
+        System.out.printf("Multiplication Table of %d%n", number);
+
+        // Using a while loop to generate the multiplication table
+        int i = 1; // Initialization
+        while (i <= 12) { // Generates up to 12 multiples
+            System.out.printf("%d x %d = %d%n", number, i, number * i); // Formatted output
+            i++; // Increment
+        }
+
+        // Example of using a do-while loop for demonstration
+        System.out.printf("%nDo-While Loop Demonstration:%n");
+        i = 1; // Reset the counter
+        do {
+            System.out.printf("%d x %d = %d%n", number, i, number * i); // Formatted output
+            i++; // Increment
+        } while (i <= 12); // Condition for the loop
+    }
+}

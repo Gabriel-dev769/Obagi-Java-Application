@@ -1,0 +1,14 @@
+public class WhileLoopStatement{
+	public static void main (String[] args){
+		int num = 50;
+		
+		int i = 1;// initialization expression
+		
+		while (i <= 10){
+			System.out.printf("%d%N",num);
+// increament(addition)/ decreament(subtraction) if ommitted could cause an infinite loop which could cause error	
+			i++;
+ 
+		}
+	}
+}
